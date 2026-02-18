@@ -1096,3 +1096,21 @@ h3{font-size: 22px; margin:0 0 10px 0;}
 
 .calendar-rail{display:flex;gap:14px;overflow:auto;padding-bottom:6px;}
 .calendar-card{min-width:320px;max-width:320px;}
+
+/* Library-style rail arrows (unified) */
+.rail-wrap{position:relative;}
+.rail-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;border-radius:999px;
+  border:1px solid rgba(0,0,0,0.16);
+  background:#fff;color:#0b1b12;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 18px rgba(0,0,0,0.14);
+  cursor:pointer;z-index:6;
+}
+.rail-arrow--left{left:-14px;}
+.rail-arrow--right{right:-14px;}
+.rail-arrow:disabled{opacity:0.35;cursor:default}
+@media (max-width:640px){
+  .rail-arrow{display:none;}
+}
